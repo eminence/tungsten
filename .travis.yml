@@ -1,7 +1,17 @@
+sudo: required
+dist: trusty
 language: cpp
 compiler: gcc
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install cmake-3.7.0 -y
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-3.6
+    - kalakris-cmake
+    packages:
+    - gcc-5
+    - g++-5
+    - clang-3.6
+    - cmake
 install: true
 script: mkdir build && cd build && cmake ../ && make -r -j 2
