@@ -1,4 +1,7 @@
 language: cpp
 compiler: gcc
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install cmake-3.7.0 -y
 install: true
 script: mkdir build && cd build && cmake ../ && make -r -j 2
