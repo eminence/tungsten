@@ -17,7 +17,7 @@ addons:
     - cmake
 before_install:
     - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
-    - sudo add-apt-repository --yes --remove ppa:whatever/ppa
+    - sudo add-apt-repository --yes --remove ppa:kalakris-cmake/ppa
     - sudo apt-get update -qq
     - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
 install: true
